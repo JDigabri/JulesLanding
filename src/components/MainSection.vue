@@ -42,23 +42,35 @@
                         <p class="goto" style="font-weight: 200;" ref="goto">Watch Beta Demo --></p>
                     </div>
                 </div>
+
+
             </div>
+            <DemoView />
+
         </div>
+
     </div>
 </template>
 
 <style scoped>
-.main-content {
+
+.main{
     width: 100vw;
     height: 1100px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    flex-direction: column;
     background: linear-gradient(270deg, #15151E 0%, #1A1B2C 101.03%);
     border: 1px solid transparent;
     border-image: linear-gradient(90deg, rgba(255, 255, 255, 0.00) 0%, rgba(255, 255, 255, 0.50) 50%, rgba(255, 255, 255, 0.00) 100%) 1;
     margin-top: 250px;
+    display: flex;
+    justify-content: center;
+}
+.main-content {
+    
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+
 }
 
 .master {
@@ -69,7 +81,7 @@
 }
 
 .main-content-text {
-    padding-left: 150px;
+    padding-right: 150px;
     padding-top: 150px;
     margin-top: 100px;
     display: flex;
@@ -137,7 +149,7 @@
     /* Adjust the gap size as needed */
     margin-top: 50px;
     /* Space between the text and grid */
-    margin-left: 150px;
+    margin-right: 150px;
     width: 460px;
 }
 
@@ -212,13 +224,15 @@
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import bigCard from './BigCard.vue';
+import DemoView from './DemoView.vue';
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default {
     name: 'MainSection',
     components: {
-        bigCard
+        bigCard,
+        DemoView
     },
     mounted() {
         // Animate the tag to fade in from the left

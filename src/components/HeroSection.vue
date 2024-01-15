@@ -44,13 +44,14 @@ export default {
 
 <style scoped>
 .hero-section {
-    height: 100vh;
+    height: 955px;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     color: white;
+    position: relative;
 }
 
 .hero-section-img {
