@@ -70,6 +70,8 @@
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
+    width: 620px;
+
 
 }
 
@@ -88,7 +90,7 @@
     justify-content: flex-start;
     align-items: flex-start;
     flex-direction: column;
-    width: 620px;
+    width: 100%;
 }
 
 .main-content-text h1 {
@@ -123,7 +125,6 @@
     background-origin: border-box;
     background-clip: content-box, border-box;
     border: 2px solid #BDCFFC;
-    /* Default border color */
     background: linear-gradient(270deg, rgba(189, 207, 252, 0.40) -5.11%, rgba(158, 119, 218, 0.40) 110.88%, rgba(0, 0, 0, 0.00) 111.02%);
 }
 
@@ -135,7 +136,7 @@
     font-family: Inter;
     font-size: 15px;
     font-style: normal;
-    font-weight: 400;
+    font-weight: 600;
     line-height: normal;
 }
 
