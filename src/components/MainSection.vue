@@ -63,6 +63,7 @@
     margin-top: 250px;
     display: flex;
     justify-content: center;
+    z-index: 9;
 }
 .main-content {
     

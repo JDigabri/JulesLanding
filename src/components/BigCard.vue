@@ -51,6 +51,7 @@ export default {
     box-shadow: 0px 4px 24px 7px rgba(0, 0, 0, 0.25);
     position: absolute;
     margin-top: 100px;
+    z-index: 55;
 }
 .bigCard-content {
     height: 100%;
