@@ -55,7 +55,7 @@
           </div>
         </div>
       </div>
-      <DemoView />
+      <DemoView ref="demo" />
     </div>
   </div>
 </template>
@@ -264,13 +264,8 @@ export default {
       ease: 'power2.out'
     })
 
-    // Animate the shop button to fade in from the left
-
-    // Animate the goto link to fade in from the left
-
     const gridItemRefs = ['gridItem1', 'gridItem2', 'gridItem3', 'gridItem4']
 
-    // Animate each grid item to fade in from the left
     gridItemRefs.forEach((ref) => {
       gsap.from(this.$refs[ref], {
         scrollTrigger: {
