@@ -95,7 +95,7 @@ export default {
     flex-shrink: 0;
     border-radius: 25px;
     background-repeat: no-repeat;
-    background-size: 160% 100%;
+    background-size: 140% 100%;
     background-position: center;
     transition: all 0.05s ease-in-out;
 }

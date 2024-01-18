@@ -60,17 +60,16 @@ export default {
     flex-direction: row;
 }
 .bigImg{
-    background-image: url('../assets/store.png');
+    background-image: url('../assets/storesmall.png');
     width: 450px;
     height: 270px;
     flex-shrink: 0;
     background-repeat: no-repeat;
-    background-size: 110%;
+    background-size: 100%;
     margin-left: auto;
     margin-top: auto;
     border-radius: 20px 0px 10px 0px;
-    border-top: 15px solid rgba(0, 0, 0, 0.1);
-    border-left: 15px solid rgba(0, 0, 0, 0.1);
+
 
 }
 .bigCard-content-text {

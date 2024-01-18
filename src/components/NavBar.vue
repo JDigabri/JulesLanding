@@ -24,7 +24,7 @@
     backdrop-filter: blur(3px);
     -webkit-backdrop-filter: blur(3px);
     border-bottom: .5px solid rgba(255, 255, 255, 0.18);
-    z-index: 10;
+    z-index: 999;
     color: var(--color-text);
     font-family: Inter, sans-serif;
     font-weight: 200;
