@@ -1,18 +1,20 @@
 <template>
     <div class="hero-section">
         <div class="hero-section-img" ref="heroImage">
-            <img src="../assets/store.png" alt="logo" class="storeImg">
+            <div alt="logo" class="storeImg" />
         </div>
         <div class="shadowCover"></div>
         <img src="../assets/grad.png" class="grad" />
         <div class="hero-section-text">
             <h1 class="hero-section-title" ref="heroTitle">SELL UNPLAYED GAMES</h1>
-            <h1 class="hero-section-title" ref="heroTitle" style="position: absolute; top: 0; filter: blur(5px);">SELL UNPLAYED GAMES</h1>
+            <h1 class="hero-section-title" ref="heroTitle" style="position: absolute; top: 0; filter: blur(5px);">SELL
+                UNPLAYED GAMES</h1>
 
-            <p class="hero-section-subtitle" ref="heroSubtitle">Take Control of Your Game Library. Gone are the days of your games collecting
+            <p class="hero-section-subtitle" ref="heroSubtitle">Take Control of Your Game Library. Gone are the days of your
+                games collecting
                 digital<br> dust. With Jules, you can sell games you no longer play to other players in our
                 user-<br>friendly marketplace, freeing up your library and your wallet.</p>
-            <button class="hero-section-button" >Shop Now</button>
+            <button class="hero-section-button">Shop Now</button>
         </div>
     </div>
 </template>
@@ -21,7 +23,7 @@
 import { gsap } from 'gsap';
 
 export default {
-    name: 'HeroSection', 
+    name: 'HeroSection',
     mounted() {
         gsap.from(this.$refs.heroImage, {
             duration: 1.5,
@@ -68,7 +70,10 @@ export default {
     width: 900px;
     height: 700px;
     border-radius: 22px;
-
+    background-image:url(../assets/store.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .shadowCover {
@@ -127,10 +132,12 @@ export default {
     height: 44px;
     flex-shrink: 0;
     background: transparent;
-    border: 2px solid #BDCFFC; /* Default border color */
+    border: 2px solid #BDCFFC;
+    /* Default border color */
     margin-top: 20px;
     position: relative;
-    color: white; /* Default text color */
+    color: white;
+    /* Default text color */
     cursor: pointer;
     font-family: Inter, sans-serif;
     outline: none;
@@ -160,7 +167,8 @@ export default {
 
 .hero-section-button:hover {
     background: linear-gradient(245deg, #BDCFFC 32.08%, #9E77DA 67.06%);
-    border-color: #9E77DA; /* Transition border color */
+    border-color: #9E77DA;
+    /* Transition border color */
 }
 
 .hero-section-button:hover::after {
@@ -170,5 +178,134 @@ export default {
 
 }
 
+body{
+    overflow-x: hidden !important;
+}
 
+@media (max-width: 1050px) {
+
+    .hero-section {
+        width: 100vw;
+        height: 900px;
+    }
+
+    .hero-section-img {
+        width: 90%;
+        height: 710px;
+        padding: 5px;
+        border-radius: 25px;    
+    }
+
+    .storeImg {
+        width: 100%;
+        height: 700px;
+        border-radius: 22px;
+    }
+
+    .hero-section-title {
+        font-size: 68px;
+    }
+
+    .hero-section-subtitle {
+        font-size: 14px;
+    }
+
+    .hero-section-button {
+        width: 200px;
+        height: 40px;
+        font-size: 12px;
+    }
+
+}
+
+@media (max-width: 600px) {
+    .hero-section {
+        width: 100vw;
+        height: 800px;
+    }
+
+    .hero-section-img {
+        width: 90%;
+        height: 610px;
+        padding: 5px;
+        border-radius: 25px;
+    }
+
+    .storeImg {
+        width: 100%;
+        height: 600px;
+        border-radius: 22px;
+        background-size: 150% 100%;
+        background-position: top;
+
+    }
+
+    .hero-section-title {
+        font-size: 42px;
+    }
+
+    .hero-section-subtitle {
+        font-size: 10px;
+    }
+
+    .hero-section-button {
+        width: 200px;
+        height: 40px;
+        font-size: 12px;
+    }
+    .hero-section-text{
+        bottom: 190px;
+    }
+
+    .shadowCover{
+        bottom: 50px;
+    }
+}
+
+@media (max-width: 450px) {
+    .hero-section {
+        width: 100vw;
+        height: 400px;
+        margin-top: 350px;
+
+    }
+    .hero-section-img {
+        width: 90%;
+        height: 410px;
+        padding: 5px;
+        border-radius: 25px;
+        margin-bottom: 300px;
+
+    }
+
+    .storeImg {
+        width: 100%;
+        height: 400px;
+        border-radius: 22px;
+        background-size: 135% 100%;
+        background-position: top;
+
+    }
+    .hero-section-text{
+        bottom: 180px;
+    }
+
+    .hero-section-title {
+        font-size: 28px;
+    }
+
+    .hero-section-subtitle {
+        font-size: 8px;
+    }
+
+    .hero-section-button {
+        width: 150px;
+        height: 40px;
+        font-size: 12px;
+    }
+    .shadowCover{
+        bottom: 0px;
+    }
+
+}
 </style>

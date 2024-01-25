@@ -14,17 +14,49 @@
                 user-<br>friendly marketplace, freeing up your library and your wallet.</p>
             <button class="hero-section-button">Shop Now</button>
         </div>
-        <div class="hero-section-img" ref="heroImage">
+        <div class="hero-section-img" ref="heroImage1">
             <div class="storeImg"></div>
         </div>
-        <div class="hero-section-img fth" ref="heroImage">
+        <div class="hero-section-img fth" ref="heroImage2">
             <div class="storeImg mobBrowse"></div>
         </div>
-        <div class="hero-section-img sth" ref="heroImage">
+        <div class="hero-section-img sth" ref="heroImage3">
             <div class="storeImg mobGame"></div>
         </div>
     </div>
 </template>
+
+
+<script>
+import { gsap } from 'gsap';
+import ScrollTrigger from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
+
+export default {
+  name: 'YourComponentName',
+  mounted() {
+    const images = [this.$refs.heroImage1, this.$refs.heroImage2, this.$refs.heroImage3];
+
+    images.forEach((section) => {
+      gsap.from(section, {
+        y: -100, // Starting position - adjust as needed
+        opacity: 0,
+        duration: 1, // Animation duration
+        scrollTrigger: {
+          trigger: section,
+          start: "top bottom-=100", // When to start the animation
+          end: "bottom top+=100",
+          toggleActions: "play none none reverse",
+        }
+      });
+    });
+  }
+};
+</script>
+
+
+
 
 <style scoped>
 .hero-section {
@@ -51,14 +83,14 @@
     position: absolute;
     top: -140px;
     margin-right: 450px;
-    z-index: -1;
+    z-index: -2 !important;
 }
 
 .sth{
     position: absolute;
     top: -140px;
     margin-left: 450px;
-    z-index: -1;
+    z-index: -2 !important;
 }
 .hero-section-img {
     background: linear-gradient(245deg, #BDCFFC 32.08%, #9E77DA 67.06%);
@@ -68,6 +100,7 @@
     justify-content: center;
     align-items: center;
     margin-top: 350px;
+    z-index: -1;
 
 }
 

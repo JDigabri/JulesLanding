@@ -142,4 +142,51 @@ export default {
     flex-direction: row;
     text-align: left;
 }
+
+@media only screen and (max-width: 1000px) {
+    .pod-content{
+    color: white;
+    width: 250px;
+}
+
+.pod-content h1{
+    font-size: 14px;
+    font-weight: 700;
+}
+.pod-content p{
+    font-size: 10px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.50);
+}
+
+}
+
+@media only screen and (max-width: 800px) {
+    .pod{
+        flex-direction: column;
+        text-align: center;
+        margin-bottom: 25px;
+    }
+    .podsTop{
+        margin-top: 0px;
+    }
+    .pod-content p{
+    font-size: 12px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.50);
+}
+    .podr{
+        flex-direction: column;
+        text-align: center;
+    }
+    .pod-content{
+        width: 80%;
+    }
+    .podsTop{
+        flex-direction: column;
+    }
+    .podsBottom{
+        flex-direction: column;
+    }
+}
 </style>
