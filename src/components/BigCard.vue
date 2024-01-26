@@ -134,4 +134,61 @@ export default {
     cursor: pointer;
 }
 
+
+@media screen and (max-width: 900px){
+    .bigCard{
+        width: 90vw;
+    }
+    .bigCard-content-text{
+        font-size: 15px;
+
+    }
+    .bigCard-content-button{
+        font-size: 11px;
+    }
+}
+
+@media screen and (max-width: 800px){
+    .bigCard{
+        width: 90vw;
+        height: 500px;
+    }
+    .bigCard-content{
+        flex-direction: column;
+        align-items: center;
+    }
+    .bigCard-content-text{
+        width: 100%;
+        font-size: 15px;
+        padding: 20px;
+    }
+    .bigCard-content-text p{
+        text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.4);        
+    }
+    .bigCard-content-button{
+        width: 100%;
+        height: 50%;
+        font-size: 11px;
+    }
+    .bigImg{
+        width: 90%;
+        border-radius: 0px 0px 10px 10px;
+        align-self: flex-end;
+        margin-top: auto;
+    }
+}
+
+@media screen and (max-width: 550px){
+    .bigImg{
+        width: 90%;
+        border-radius: 0px 0px 10px 10px;
+        align-self: flex-end;
+        margin-top: auto;
+        background-size: 130% 130%;
+    }
+    .bigCard-content-text{
+        font-size: 15px;
+        padding: 15px;
+    }
+}
 </style>
