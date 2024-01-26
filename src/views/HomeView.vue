@@ -5,7 +5,6 @@
     <MainSection />
     <CardSection />
     <BottomHero />
-    <FooterView />
 </template>
 
 <script>
@@ -19,6 +18,18 @@ import BottomHero from '@/components/BottomHero.vue';
 import FooterView from '@/components/FooterView.vue';
 
 export default {
+    name: 'App', // assuming this is your root component
+
+    mounted() {
+        // Disable horizontal scrollbar when the component mounts
+        document.body.style.overflowX = 'hidden';
+    },
+
+    beforeUnmount() {
+        // Re-enable horizontal scrollbar when the component is about to unmount
+        document.body.style.overflowX = '';
+    },
+
     components: {
         NavBar,
         HeroSection,
@@ -31,3 +42,14 @@ export default {
 }
 
 </script>
+
+
+<style>
+body{
+    overflow-x: hidden !important;
+    width: 100vw;
+    max-width: 100vw !important;
+
+
+}
+</style>

@@ -17,4 +17,12 @@
     z-index: 9;
     margin-top: 120px;
 }
+
+@media screen and (max-width: 500px){
+    .footer {
+
+        margin-top: 0px;
+    }
+}
+
 </style>

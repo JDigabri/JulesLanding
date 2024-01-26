@@ -1,5 +1,5 @@
 <template>
-  <div class="master">
+  <div class="master" id="master">
     <bigCard />
     <div class="main">
       <div class="main-content">
@@ -7,55 +7,46 @@
           <div class="tag" ref="tag"><span>Developers Supported</span></div>
           <h1>Open-Source Front End</h1>
           <p>
-            Enjoy a seamless, gamer-first experience. Turn your unplayed games into real money. At
-            Jules, we offer the unique opportunity to sell your games and in-game items securely to
-            other players. It's time to turn your unplayed games into new opportunities.
+            Experience the cutting-edge with Jules' open-source front end. Our transparent and community-driven interface ensures a more reliable, secure, and user-friendly gaming experience
           </p>
-          <div class="shop" ref="shop">Go To Store</div>
+          <a href = "https://jules.gg" class="shop" ref="shop">Go To Store</a>
         </div>
+        <div class="inside"></div>
 
         <div class="grid-container">
           <div class="grid-item" ref="gridItem1">
-            <h1>Open-Source Front End</h1>
+            <h1>Stripe Integration</h1>
             <p>
-              Enjoy a seamless, gamer-first experience. Turn your unplayed games into real money. At
-              Jules, we offer the unique opportunity to sell your games and in-game items securely
-              to other players. It's time to turn your unplayed games into new opportunities.
+              Our open-source front end integrates with Stripe, providing a secure and reliable payment system. This ensures every transaction on Jules is safe, smooth, and user-friendly, giving you peace of mind when selling or buying games
             </p>
-            <p class="goto" style="font-weight: 200; " ref="goto">
-              Watch Beta Demo -->
-            </p>
+            <a href="https://jules.gg" class="goto" style="font-weight: 200" ref="goto">Check It Out --></a>
           </div>
           <div class="grid-item" ref="gridItem2">
-            <h1>Open-Source Front End</h1>
+            <h1>Digital Rights Management</h1>
             <p>
-              Enjoy a seamless, gamer-first experience. Turn your unplayed games into real money. At
-              Jules, we offer the unique opportunity to sell your games and in-game items securely
-              to other players. It's time to turn your unplayed games into new opportunities.
+              Jules features a custom DRM system designed to protect the rights of game developers and players alike. Our unique approach to DRM balances security with usability, ensuring your games are safeguarded without compromising the gaming experience.
             </p>
-            <p class="goto" style="font-weight: 200" ref="goto">Watch Beta Demo --></p>
+            <a href="https://jules.gg" class="goto" style="font-weight: 200" ref="goto">Check It Out --></a>
           </div>
           <div class="grid-item" ref="gridItem3">
-            <h1>Open-Source Front End</h1>
+            <h1>Universal Launcher Compatibility Including Emulators</h1>
             <p>
-              Enjoy a seamless, gamer-first experience. Turn your unplayed games into real money. At
-              Jules, we offer the unique opportunity to sell your games and in-game items securely
-              to other players. It's time to turn your unplayed games into new opportunities.
+              Jules simplifies gaming with universal launcher compatibility, including emulators. Access all your games, from any launcher, through Jules. No more switching apps – just one platform for all your gaming needs
             </p>
-            <p class="goto" style="font-weight: 200" ref="goto">Watch Beta Demo --></p>
+            <a href="https://jules.gg" class="goto" style="font-weight: 200" ref="goto">Check It Out --></a>
           </div>
           <div class="grid-item" ref="gridItem4">
-            <h1>Open-Source Front End</h1>
+            <h1>Plug-In Market</h1>
             <p>
-              Enjoy a seamless, gamer-first experience. Turn your unplayed games into real money. At
-              Jules, we offer the unique opportunity to sell your games and in-game items securely
-              to other players. It's time to turn your unplayed games into new opportunities.
-            </p>
-            <p class="goto" style="font-weight: 200" ref="goto">Watch Beta Demo --></p>
-          </div>
+              Elevate your gaming with Jules' Plugin Store. Choose from community-crafted plugins for interface customization and added features. Transform your launcher to fit your style and needs, enhancing your gaming experience with simple, impactful modifications, all in a user-friendly environment            
+              </p>
+              <a href="https://jules.gg" class="goto" style="font-weight: 200" ref="goto">Check It Out --></a>
+
+            </div>
         </div>
       </div>
-      <DemoView ref="demo" />
+      <DemoView ref="demo" class="demo" />
+      <div class="demoImg"></div>
     </div>
   </div>
 </template>
@@ -77,6 +68,7 @@
   display: flex;
   justify-content: center;
   z-index: 9;
+
 }
 .main-content {
   display: flex;
@@ -91,6 +83,8 @@
   flex-direction: column;
   align-items: center;
   width: 100vw;
+  overflow: hidden !important;
+
 }
 
 .main-content-text {
@@ -188,7 +182,7 @@
   color: #ffffff;
 }
 
-.grid-item p {
+.grid-item p, a {
   font-family: Inter;
   font-size: 12px;
   font-style: normal;
@@ -218,6 +212,11 @@
   justify-content: center;
   margin-top: 20px;
   align-items: center;
+  text-decoration: none;
+}
+
+.demoImg {
+  display: none;
 }
 
 .shop:hover {
@@ -226,6 +225,7 @@
 }
 
 .goto {
+  text-decoration: none;
   transition: all 0.1s ease-in-out;
   cursor: pointer;
   color: #bdcffc !important;
@@ -233,6 +233,113 @@
 
 .goto:hover {
   color: #9e77da !important;
+}
+
+@media screen and (max-width: 1425px) {
+  .demoImg {
+    display: inline;
+    width: 600px;
+    height: 650px;
+    background-image: url('../assets/lib.png');
+    background-size: 100% 100%;
+    background-position: center;
+    margin-top: 220px;
+  }
+}
+
+@media screen and (max-width: 1265px) {
+  .demoImg {
+    display: none;
+  }
+  .main-content {
+    justify-content: center;
+    align-items: center;
+  }
+  .grid-container {
+    margin-right: 0px;
+  }
+  .main-content-text {
+    padding-right: 0px;
+    width: 460px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .main{
+    height: 1700px;
+
+  }
+  .main-content {
+    justify-content: center;
+    align-items: center;
+    margin-top: 120px;
+  }
+  .grid-container {
+    margin-right: 0px;
+  }
+  .main-content-text {
+    padding-right: 0px;
+    width: 460px;
+  }
+  .inside {
+    display: inline;
+    width: 580px !important;
+    height: 650px !important;
+    background-image: url('../assets/lib.png');
+    background-size: 100% 100%;
+    background-position: center;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .main {
+    height: 1700px;
+  }
+  .main-content {
+    justify-content: center;
+    align-items: center;
+    margin-top: 120px;
+  }
+  .grid-container {
+    margin-right: 0px;
+    width: 80%;
+  }
+  .main-content-text {
+    padding-right: 0px;
+    width: 80%;
+  }
+  .inside {
+    display: inline;
+    width: 380px !important;
+    height: 400px !important;
+    background-image: url('../assets/lib.png');
+    background-size: 100% 100%;
+    background-position: center;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .inside {
+    display: inline;
+    width: 90% !important;
+    height: 400px !important;
+    background-image: url('../assets/lib.png');
+    background-size: 100% 100%;
+    background-position: center;
+  }
+  .main-content {
+    justify-content: center;
+    align-items: center;
+    margin-top: 120px;
+  }
+  .grid-container p {
+
+    font-size: 9px;
+  }
+  .main-content-text {
+    padding-right: 0px;
+    
+  }
 }
 </style>
 

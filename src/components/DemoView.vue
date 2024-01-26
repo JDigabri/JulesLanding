@@ -392,4 +392,13 @@ export default {
   background-size: cover;
   background-position: center;
   border: 1px solid #266DD3;
-}</style>
+}
+@media screen and (max-width: 1425px) {
+  .tabHolder{
+    display: none;
+  }
+  .demoMaster{
+    display: none;
+  }
+}
+</style>

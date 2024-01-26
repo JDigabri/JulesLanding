@@ -1,5 +1,5 @@
 <template>
-    <div class="podcont">
+    <div class="podcont" id="podcont">
         <div class="podsTop">
             <div class="pod">
                 <div class="circle"><img src = "../assets/game.png" /> <img src = "../assets/game.png" style="position: absolute; filter: blur(7px);" /></div>

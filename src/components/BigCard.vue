@@ -5,8 +5,8 @@
                 <p>Discover your next favorite game on Jules. Browse through our wide collection of games - from the most
                     popular titles to hidden indie gems. Enjoy competitive prices and a user-friendly interface.</p>
                 <div class="bigCard-content-button">
-                <div class="shop">Go To Store</div>
-                    <p style="margin-left: 15px;font-weight: 200;">Watch Beta Demo --></p>
+                <a href = "https://jules.gg" class="shop">Go To Store</a>
+                    <a href="https://www.youtube.com/watch?v=jHVc6r6S4t8&feature=youtu.be" style="margin-left: 15px;font-weight: 200; color: white; text-decoration: none;">Watch Beta Demo --></a>
                 </div>
             </div>
 
@@ -25,6 +25,8 @@ export default {
     name: 'BigCard', // replace with your component name
 
     mounted() {
+        document.body.style.overflowX = 'hidden';
+
         // Set the initial rotation of the card to almost flat
         gsap.set(this.$refs.bigCard, { transformPerspective: 1000, rotationX: 85 });
 
@@ -37,6 +39,10 @@ export default {
                 toggleActions: 'play none none none'
             }
         });
+    },
+    beforeDestroy() {
+        // Re-enable horizontal scrollbar when the component is destroyed
+        document.body.style.overflowX = '';
     }
 }
 </script>
@@ -127,6 +133,8 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
+    text-decoration: none;
+
 }
 
 .shop:hover {
@@ -160,7 +168,7 @@ export default {
     .bigCard-content-text{
         width: 100%;
         font-size: 15px;
-        padding: 20px;
+        padding: 25px;
     }
     .bigCard-content-text p{
         text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.4);        
@@ -180,15 +188,15 @@ export default {
 
 @media screen and (max-width: 550px){
     .bigImg{
-        width: 90%;
+        width: 100%;
         border-radius: 0px 0px 10px 10px;
         align-self: flex-end;
         margin-top: auto;
-        background-size: 130% 130%;
+        background-size: 150% 130%;
     }
     .bigCard-content-text{
         font-size: 15px;
-        padding: 15px;
+        padding: 25px;
     }
 }
 </style>

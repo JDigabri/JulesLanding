@@ -1,5 +1,5 @@
 <template>
-  <div class="cardHolder">
+  <div class="cardHolder" id="cardholder">
     <div class="BigCard">
       <!-- Container for angling the images -->
       <div class="bigcard-image"></div>
@@ -56,11 +56,9 @@
       <div class="textHolder" style="padding-bottom: 25px">
         <h1 class="title">Browse Hundreds of Games On Our User Ran Community Market</h1>
         <p class="subtitle">
-          Take Control of Your Game Library. Gone are the days of your games collecting digital
-          dust. With Jules, you can sell games you no longer play to other players in our
-          user-friendly marketplace, freeing up your library and your wallet.
+          Dive into our vast community market where hundreds of games await. From the latest hits to timeless classics, discover your next gaming adventure with Jules.
         </p>
-        <p class="button">Go To Market --></p>
+        <a href="https://jules.gg" class="button" >Go To Market --></a>
       </div>
     </div>
     <div class="smallCardHolder">
@@ -71,11 +69,9 @@
         >
           <h1>Global Community</h1>
           <p class="subtitle">
-            Take Control of Your Game Library. Gone are the days of your games collecting digital
-            dust. With Jules, you can sell games you no longer play to other players in our
-            user-friendly marketplace, freeing up your library and your wallet.
+            Join our global community of gamers. Connect, share, and trade with fellow enthusiasts from around the world. With Jules, you're part of a worldwide network of gaming passion
           </p>
-          <p class="button">Go To Market --></p>
+          <a href="https://jules.gg" class="button" >Go To Market --></a>
         </div>
         <div class="globe"></div>
         <div class="jelq">
@@ -89,11 +85,9 @@
         <div class="textHolder" style="padding-bottom: 25px">
           <h1>Goodbye to Long Start-Up Times</h1>
           <p class="subtitle">
-            Take Control of Your Game Library. Gone are the days of your games collecting digital
-            dust. With Jules, you can sell games you no longer play to other players in our
-            user-friendly marketplace, freeing up your library and your wallet.
+            Experience lightning-fast performance with an average start-up time of 752 MS. Jules ensures quick, seamless access to your favorite games, eliminating long start-up times
           </p>
-          <p class="button">Go To Market --></p>
+          <a href="https://jules.gg" class="button" >Go To Market --></a>
         </div>
       </div>
     </div>
@@ -118,7 +112,7 @@
 
 .globe {
   background-image: url('../src/assets/globe.png');
-  width: 600px;
+  width: 100%;
   height: 387.5px;
   background-repeat: no-repeat;
   background-size: 70% 100%;
@@ -151,7 +145,7 @@
   font-weight: 200;
   font-size: 32px;
 }
-.textHolder p {
+.textHolder p, a {
   font-family: 'Inter', sans-serif;
   font-weight: 200;
   font-size: 12px;
@@ -159,7 +153,14 @@
   margin-top: 10px;
   margin-bottom: 10px;
   opacity: 0.5;
+  text-decoration: none;
+  color: white;
 }
+.textHolder a:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
 .BigCard {
   overflow: hidden; /* Hide the overflow to create a viewport */
   border-radius: 10px;
@@ -265,6 +266,99 @@
   display: flex;
   position: absolute;
   opacity: 0.3;
+}
+
+@media screen and (max-width: 1100px){
+  .cardHolder {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+.smallCardHolder { 
+  width: 100vw;
+  margin-left: 0px;
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+  .BigCard {
+    width: 80%;
+    height: 600px;
+    margin-top: 25px;
+
+  }
+
+  .angledContainer {
+    width: 150%;
+
+  }
+  .textHolder {
+    padding: 25px;
+  }
+  .SmallCard {
+    width: 80%;
+  }
+  .bigcard-image {
+
+    margin-top: 10%;
+    margin-left: 20%;
+  }
+  .mainText {
+    width: 100vw;
+    height: 300px;
+    font-size: 150px;
+    margin-left: -80px;
+
+  }
+  .jelq{
+    width: 100vw;
+    right: 10%;
+    }
+    .mainText{
+      width: 100%;
+      height: 300px;
+      font-size: 250px;
+    }
+
+  
+}
+
+@media screen and (max-width: 755px){
+  .mainText {
+    width: 100vw;
+    height: 300px;
+    font-size: 150px;
+    margin-left: 0px;
+
+  }
+  .BigCard {
+    width: 100%;
+    height: 400px;
+    margin-top: 25px;
+
+  }
+  .angledContainer {
+    width: 150%;
+
+  }
+  .textHolder {
+    padding: 25px;
+  }
+  .SmallCard {
+    width: 100%;
+  }
+  .bigcard-image {
+    display: none;
+  }
+  .jelq{
+    width: 100vw;
+    right: 0;
+    }
+  .textHolder{
+    width: 100% !important;
+  }
+
 }
 </style>
 
