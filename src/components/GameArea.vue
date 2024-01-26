@@ -2,9 +2,9 @@
     <div class="MainArea">
         <div class="GameInfo">
             <div class="img" style="position: absolute; filter: blur(5px);z-index: -1;"
-                :style="`background-image: url(../src/assets/Big/${pictureName}.jpg);`"></div>
+                :style="`background-image: url(../assets/${pictureName}.jpg);`"></div>
 
-            <div class="img" :style="`background-image: url(../src/assets/${pictureName}.jpg);`"></div>
+            <div class="img" :style="`background-image: url(../assets/${pictureName}.jpg);`"></div>
 
             <div class="infos">
                 <span style="width: 200px;">{{ name }}</span>
@@ -59,8 +59,25 @@
 </template>
 
 <script>
+import stray from '../assets/stray.jpg'
+import gta from '../assets/gta.jpg'
+import nba from '../assets/nba.jpg'
+import r6 from '../assets/r6.jpg'
+import apex from '../assets/apex.jpg'
+import coldwar from '../assets/coldwar.jpg'
+
 export default {
     name: 'MainArea',
+    data() {
+        return {
+            stray,
+            gta,
+            nba,
+            r6,
+            apex,
+            coldwar,
+        }
+    },
     props: {
         name: String,
         pictureName: String,

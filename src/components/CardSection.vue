@@ -6,59 +6,28 @@
       <div class="angledContainer" style="left: -50px">
         <div class="BigCard-inner" ref="bigCardInner">
           <!-- Only one set of images is needed as GSAP will handle the looping -->
-          <div
-            style="background-image: url('../src/assets/apex.jpg')"
-            alt="Apex"
-            class="bigImg"
-          />
-          <div
-            style="background-image: url('../src/assets/coldwar.jpg')"
-            alt="Apex"
-            class="bigImg"
-          />
-          <div
-            style="background-image: url('../src/assets/gta.jpg')"
-            alt="Apex"
-            class="bigImg"
-          />
-          <div
-            style="background-image: url('../src/assets/Stray.jpg')"
-            alt="Apex"
-            class="bigImg"
-          />
+          <div :style="`background-image: url(${apexImageUrl})`" alt="Apex" class="bigImg" />
+          <div :style="`background-image: url(${coldwarImageUrl})`" alt="Cold War" class="bigImg" />
+          <div :style="`background-image: url(${gtaImageUrl})`" alt="GTA" class="bigImg" />
+          <div :style="`background-image: url(${strayImageUrl})`" alt="Stray" class="bigImg" />
         </div>
       </div>
       <div class="angledContainer" style="left: -140px; top: -32px">
         <div class="BigCard-inner" ref="bigCardInnerSecond">
-          <div
-            style="background-image: url('../src/assets/dis.webp')"
-            alt="Apex"
-            class="bigImg"
-          />
-          <div
-            style="background-image: url('../src/assets/hitman.jpg')"
-            alt="Apex"
-            class="bigImg"
-          />
-          <div
-            style="background-image: url('../src/assets/nba.jpg')"
-            alt="Apex"
-            class="bigImg"
-          />
-          <div
-            style="background-image: url('../src/assets/r6.jpg')"
-            alt="Apex"
-            class="bigImg"
-          />
+          <div :style="`background-image: url(${disImageUrl})`" alt="Dis" class="bigImg" />
+          <div :style="`background-image: url(${hitmanImageUrl})`" alt="Hitman" class="bigImg" />
+          <div :style="`background-image: url(${nbaImageUrl})`" alt="NBA" class="bigImg" />
+          <div :style="`background-image: url(${r6ImageUrl})`" alt="R6" class="bigImg" />
         </div>
       </div>
 
       <div class="textHolder" style="padding-bottom: 25px">
         <h1 class="title">Browse Hundreds of Games On Our User Ran Community Market</h1>
         <p class="subtitle">
-          Dive into our vast community market where hundreds of games await. From the latest hits to timeless classics, discover your next gaming adventure with Jules.
+          Dive into our vast community market where hundreds of games await. From the latest hits to
+          timeless classics, discover your next gaming adventure with Jules.
         </p>
-        <a href="https://jules.gg" class="button" >Go To Market --></a>
+        <a href="https://jules.gg" class="button">Go To Market --></a>
       </div>
     </div>
     <div class="smallCardHolder">
@@ -69,9 +38,10 @@
         >
           <h1>Global Community</h1>
           <p class="subtitle">
-            Join our global community of gamers. Connect, share, and trade with fellow enthusiasts from around the world. With Jules, you're part of a worldwide network of gaming passion
+            Join our global community of gamers. Connect, share, and trade with fellow enthusiasts
+            from around the world. With Jules, you're part of a worldwide network of gaming passion
           </p>
-          <a href="https://jules.gg" class="button" >Go To Market --></a>
+          <a href="https://jules.gg" class="button">Go To Market --></a>
         </div>
         <div class="globe"></div>
         <div class="jelq">
@@ -85,9 +55,10 @@
         <div class="textHolder" style="padding-bottom: 25px">
           <h1>Goodbye to Long Start-Up Times</h1>
           <p class="subtitle">
-            Experience lightning-fast performance with an average start-up time of 752 MS. Jules ensures quick, seamless access to your favorite games, eliminating long start-up times
+            Experience lightning-fast performance with an average start-up time of 752 MS. Jules
+            ensures quick, seamless access to your favorite games, eliminating long start-up times
           </p>
-          <a href="https://jules.gg" class="button" >Go To Market --></a>
+          <a href="https://jules.gg" class="button">Go To Market --></a>
         </div>
       </div>
     </div>
@@ -111,7 +82,7 @@
 }
 
 .globe {
-  background-image: url('../src/assets/globe.png');
+  background-image: url('../assets/globe.png');
   width: 100%;
   height: 387.5px;
   background-repeat: no-repeat;
@@ -145,7 +116,8 @@
   font-weight: 200;
   font-size: 32px;
 }
-.textHolder p, a {
+.textHolder p,
+a {
   font-family: 'Inter', sans-serif;
   font-weight: 200;
   font-size: 12px;
@@ -228,7 +200,7 @@
 .bigcard-image {
   width: 410px;
   height: 240px;
-  background-image: url('../src/assets/r6.jpg');
+  background-image: url('../assets/r6.jpg');
   background-repeat: no-repeat;
   background-size: 100% 100%;
   background-position: center;
@@ -268,30 +240,28 @@
   opacity: 0.3;
 }
 
-@media screen and (max-width: 1100px){
+@media screen and (max-width: 1100px) {
   .cardHolder {
     flex-direction: column;
     align-items: center;
     justify-content: center;
   }
-.smallCardHolder { 
-  width: 100vw;
-  margin-left: 0px;
-  margin-top: 25px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+  .smallCardHolder {
+    width: 100vw;
+    margin-left: 0px;
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
   .BigCard {
     width: 80%;
     height: 600px;
     margin-top: 25px;
-
   }
 
   .angledContainer {
     width: 150%;
-
   }
   .textHolder {
     padding: 25px;
@@ -300,7 +270,6 @@
     width: 80%;
   }
   .bigcard-image {
-
     margin-top: 10%;
     margin-left: 20%;
   }
@@ -309,38 +278,32 @@
     height: 300px;
     font-size: 150px;
     margin-left: -80px;
-
   }
-  .jelq{
+  .jelq {
     width: 100vw;
     right: 10%;
-    }
-    .mainText{
-      width: 100%;
-      height: 300px;
-      font-size: 250px;
-    }
-
-  
+  }
+  .mainText {
+    width: 100%;
+    height: 300px;
+    font-size: 250px;
+  }
 }
 
-@media screen and (max-width: 755px){
+@media screen and (max-width: 755px) {
   .mainText {
     width: 100vw;
     height: 300px;
     font-size: 150px;
     margin-left: 0px;
-
   }
   .BigCard {
     width: 100%;
     height: 400px;
     margin-top: 25px;
-
   }
   .angledContainer {
     width: 150%;
-
   }
   .textHolder {
     padding: 25px;
@@ -351,22 +314,41 @@
   .bigcard-image {
     display: none;
   }
-  .jelq{
+  .jelq {
     width: 100vw;
     right: 0;
-    }
-  .textHolder{
+  }
+  .textHolder {
     width: 100% !important;
   }
-
 }
 </style>
 
 <script>
 import { gsap } from 'gsap'
+import apexImage from '../assets/apex.jpg'
+import coldwarImage from '../assets/coldwar.jpg'
+import gtaImage from '../assets/gta.jpg'
+import strayImage from '../assets/Stray.jpg'
+import disImage from '../assets/dis.webp'
+import hitmanImage from '../assets/hitman.jpg'
+import nbaImage from '../assets/nba.jpg'
+import r6Image from '../assets/r6.jpg'
 
 export default {
   name: 'GameSlider',
+  data() {
+    return {
+      apexImageUrl: apexImage,
+      coldwarImageUrl: coldwarImage,
+      gtaImageUrl: gtaImage,
+      strayImageUrl: strayImage,
+      disImageUrl: disImage,
+      hitmanImageUrl: hitmanImage,
+      nbaImageUrl: nbaImage,
+      r6ImageUrl: r6Image
+    }
+  },
   mounted() {
     this.startAnimation()
   },
