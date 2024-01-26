@@ -59,25 +59,10 @@
 </template>
 
 <script>
-import stray from '../assets/stray.jpg'
-import gta from '../assets/gta.jpg'
-import nba from '../assets/nba.jpg'
-import r6 from '../assets/r6.jpg'
-import apex from '../assets/apex.jpg'
-import coldwar from '../assets/coldwar.jpg'
+
 
 export default {
     name: 'MainArea',
-    data() {
-        return {
-            stray,
-            gta,
-            nba,
-            r6,
-            apex,
-            coldwar,
-        }
-    },
     props: {
         name: String,
         pictureName: String,
