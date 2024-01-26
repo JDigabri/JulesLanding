@@ -4,7 +4,7 @@
             <div class="img" style="position: absolute; filter: blur(5px);z-index: -1;"
                 :style="`background-image: url(../src/assets/Big/${pictureName}.jpg);`"></div>
 
-            <div class="img" :style="`background-image: url(../src/assets/Big/${pictureName}.jpg);`"></div>
+            <div class="img" :style="`background-image: url(../src/assets/${pictureName}.jpg);`"></div>
 
             <div class="infos">
                 <span style="width: 200px;">{{ name }}</span>

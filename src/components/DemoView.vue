@@ -76,7 +76,7 @@
           </div>
           <div class="gamePrev" v-for="(game, index) in julesGames" :key="index"
             :class="{ active: activeGame === game.name }" @click="selectGame(game.name, game.pictureName)">
-            <img :src="`../src/Small/${game.imageUrl}`" /><span>{{ game.name }}</span>
+            <img :src="`./src/assets/${game.imageUrl}`" /><span>{{ game.name }}</span>
           </div>
         </div>
         <div class="selectSteam">
@@ -84,19 +84,19 @@
             <p>Steam</p>
           </div>
           <div class="gamePrev">
-            <img src="../assets/Small/stray.png" /><span>Stray</span>
+            <img src="../assets/stray.png" /><span>Stray</span>
           </div>
           <div class="gamePrev">
-            <img src="../assets/Small/gta.png" /><span>Grand Theft Auto</span>
+            <img src="../assets/gta.png" /><span>Grand Theft Auto</span>
           </div>
           <div class="gamePrev">
-            <img src="../assets/Small/nba.png" /><span>NBA 2K23</span>
+            <img src="../assets/nba.png" /><span>NBA 2K23</span>
           </div>
           <div class="gamePrev">
-            <img src="../assets/Small/r6.png" /><span>Rainbow Six Siege</span>
+            <img src="../assets/r6.png" /><span>Rainbow Six Siege</span>
           </div>
           <div class="gamePrev">
-            <img src="../assets/Small/apex.png" /><span>Apex Legends</span>
+            <img src="../assets/apex.png" /><span>Apex Legends</span>
           </div>
 
         </div>
@@ -122,12 +122,12 @@ export default {
       pictureName: 'stray',
       activeGame: 'Stray',
       julesGames: [
-        { name: 'Stray', pictureName: 'stray', imageUrl: '../assets/Small/stray.png' },
-        { name: 'Grand Theft Auto', pictureName: 'gta', imageUrl: '../assets/Small/gta.png' },
-        { name: 'NBA 2K23', pictureName: 'nba', imageUrl: '../assets/Small/nba.png' },
-        { name: 'Rainbow Six Siege', pictureName: 'r6', imageUrl: '../assets/Small/r6.png' },
-        { name: 'Apex Legends', pictureName: 'apex', imageUrl: '../assets/Small/apex.png' },
-        { name: 'COD: Cold War', pictureName: 'coldwar', imageUrl: '../assets/Small/coldwar.png' }
+        { name: 'Stray', pictureName: 'stray', imageUrl: '../assets/stray.png' },
+        { name: 'Grand Theft Auto', pictureName: 'gta', imageUrl: '../assets/gta.png' },
+        { name: 'NBA 2K23', pictureName: 'nba', imageUrl: '../assets/nba.png' },
+        { name: 'Rainbow Six Siege', pictureName: 'r6', imageUrl: '../assets/r6.png' },
+        { name: 'Apex Legends', pictureName: 'apex', imageUrl: '../assets/apex.png' },
+        { name: 'COD: Cold War', pictureName: 'coldwar', imageUrl: '../assets/coldwar.png' }
       ],
     };
   },

@@ -7,22 +7,22 @@
         <div class="BigCard-inner" ref="bigCardInner">
           <!-- Only one set of images is needed as GSAP will handle the looping -->
           <div
-            style="background-image: url('../src/assets/Big/apex.jpg')"
+            style="background-image: url('../src/assets/apex.jpg')"
             alt="Apex"
             class="bigImg"
           />
           <div
-            style="background-image: url('../src/assets/Big/coldwar.jpg')"
+            style="background-image: url('../src/assets/coldwar.jpg')"
             alt="Apex"
             class="bigImg"
           />
           <div
-            style="background-image: url('../src/assets/Big/gta.jpg')"
+            style="background-image: url('../src/assets/gta.jpg')"
             alt="Apex"
             class="bigImg"
           />
           <div
-            style="background-image: url('../src/assets/Big/Stray.jpg')"
+            style="background-image: url('../src/assets/Stray.jpg')"
             alt="Apex"
             class="bigImg"
           />
@@ -31,22 +31,22 @@
       <div class="angledContainer" style="left: -140px; top: -32px">
         <div class="BigCard-inner" ref="bigCardInnerSecond">
           <div
-            style="background-image: url('../src/assets/Big/dis.webp')"
+            style="background-image: url('../src/assets/dis.webp')"
             alt="Apex"
             class="bigImg"
           />
           <div
-            style="background-image: url('../src/assets/Big/hitman.jpg')"
+            style="background-image: url('../src/assets/hitman.jpg')"
             alt="Apex"
             class="bigImg"
           />
           <div
-            style="background-image: url('../src/assets/Big/nba.jpg')"
+            style="background-image: url('../src/assets/nba.jpg')"
             alt="Apex"
             class="bigImg"
           />
           <div
-            style="background-image: url('../src/assets/Big/r6.jpg')"
+            style="background-image: url('../src/assets/r6.jpg')"
             alt="Apex"
             class="bigImg"
           />
@@ -228,7 +228,7 @@
 .bigcard-image {
   width: 410px;
   height: 240px;
-  background-image: url('../src/assets/Big/r6.jpg');
+  background-image: url('../src/assets/r6.jpg');
   background-repeat: no-repeat;
   background-size: 100% 100%;
   background-position: center;
