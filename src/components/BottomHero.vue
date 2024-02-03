@@ -80,7 +80,7 @@ export default {
 }
 
 .mobBrowse {
-  background-image: url('../assets/mobbrowse.png') !important;
+  background-image: url('../assets/mobBrowse.png') !important;
 }
 .fth {
   position: absolute;

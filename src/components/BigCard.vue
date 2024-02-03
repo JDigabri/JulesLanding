@@ -36,7 +36,7 @@ export default {
             scrollTrigger: {
                 trigger: this.$refs.bigCard,
                 start: 'bottom bottom', // Start the animation when the bottom of the card is at the bottom of the viewport
-                toggleActions: 'play none none none'
+                toggleActions: 'play none none none',
             }
         });
     },
@@ -58,6 +58,7 @@ export default {
     position: absolute;
     margin-top: 100px;
     z-index: 55;
+    will-change: tramform;
 }
 .bigCard-content {
     height: 100%;

@@ -1,158 +1,226 @@
 <template>
-    <div class="MainArea">
-        <div class="GameInfo">
-            <div class="img" style="position: absolute; filter: blur(5px);z-index: -1;"
-                :style="`background-image: url(../assets/${pictureName}.jpg);`"></div>
+  <div class="MainArea">
+    <div class="GameInfo">
+      <div
+        class="img"
+        style="position: absolute; filter: blur(5px); z-index: -1"
+        :style="{ backgroundImage: `url(${imageUrl})` }"
+      ></div>
 
-            <div class="img" :style="`background-image: url(../assets/${pictureName}.jpg);`"></div>
+      <div class="img" :style="{ backgroundImage: `url(${imageUrl})` }"></div>
 
-            <div class="infos">
-                <span style="width: 200px;">{{ name }}</span>
-                <p style="color: rgba(255, 255, 255, 0.50);
-                font-family: Inter;
-                font-size: 16px;
-                font-style: normal;
-                font-weight: 200;
-                line-height: normal;
-                margin-top: 20px;">You’ve Played <span style="font-size: 16px; margin-left: 20px;">2hr 30min </span>
-                </p>
-                <p style="color: rgba(255, 255, 255, 0.50);
-                font-family: Inter;
-                font-size: 16px;
-                font-style: normal;
-                font-weight: 200;
-                line-height: normal;
-                margin-top: 10px;">Last Played <span style="font-size: 16px;margin-left: 37px;">Today</span></p>
-                <div style="display: flex;margin-top: auto;">
-                    <div class="button">Play</div>
-                    <div
-                        style="margin-left: 5px; width: 43px;height: 42px;flex-shrink: 0;border-radius: 10px;background: rgba(78, 89, 109, 0.10); justify-content: center; align-items: center; display: flex;">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
-                            <g clip-path="url(#clip0_168_460)">
-                                <path
-                                    d="M13.6667 25H11.3333C10.5448 25 9.87917 24.4094 9.78542 23.625L9.53646 21.6708C9.03958 21.5094 8.56042 21.3104 8.10521 21.0781L6.54896 22.2875C5.91771 22.776 5.02917 22.7198 4.48125 22.1562L2.84062 20.5156C2.28125 19.9729 2.225 19.0844 2.71354 18.4542L3.92292 16.8969C3.68958 16.4417 3.49062 15.9625 3.33021 15.4656L1.37187 15.2167C0.590625 15.1208 0 14.4552 0 13.6667V11.3333C0 10.5448 0.590625 9.87917 1.375 9.78542L3.32917 9.53646C3.49062 9.03958 3.68958 8.56042 3.92188 8.10521L2.71354 6.54896C2.22396 5.91771 2.28125 5.02812 2.84583 4.48021L4.48646 2.83958C5.02917 2.28021 5.91875 2.225 6.54792 2.7125L8.10417 3.92292C8.55937 3.69062 9.03854 3.49167 9.53646 3.33021L9.78542 1.37187C9.87917 0.590625 10.5448 0 11.3333 0H13.6667C14.4552 0 15.1208 0.590625 15.2146 1.375L15.4635 3.32917C15.9615 3.49062 16.4406 3.68958 16.8958 3.92188L18.4521 2.7125C19.0844 2.22396 19.9719 2.28021 20.5198 2.84479L22.1604 4.48542C22.7198 5.02813 22.776 5.91667 22.2875 6.54687L21.0781 8.10417C21.3115 8.55937 21.5104 9.03854 21.6708 9.53542L23.6292 9.78437C24.4094 9.87917 25 10.5448 25 11.3333V13.6667C25 14.4552 24.4094 15.1208 23.625 15.2146L21.6708 15.4635C21.5094 15.9604 21.3104 16.4396 21.0781 16.8948L22.2875 18.451C22.7771 19.0823 22.7198 19.9708 22.1552 20.5187L20.5146 22.1594C19.9719 22.7188 19.0823 22.776 18.4531 22.2865L16.8958 21.0771C16.4406 21.3104 15.9615 21.5094 15.4646 21.6698L15.2156 23.6281C15.1208 24.4094 14.4552 25 13.6667 25ZM8.05208 19.9375C8.13854 19.9375 8.22708 19.9594 8.30625 20.0031C8.88021 20.324 9.50208 20.5823 10.1542 20.7698C10.3542 20.8271 10.501 20.9979 10.5271 21.2042L10.8187 23.4958C10.85 23.7573 11.076 23.9583 11.3333 23.9583H13.6667C13.924 23.9583 14.15 23.7573 14.1802 23.501L14.4729 21.2052C14.499 20.999 14.6458 20.8281 14.8458 20.7708C15.4979 20.5833 16.1198 20.325 16.6937 20.0042C16.876 19.9021 17.1031 19.9198 17.2667 20.0479L19.0896 21.4646C19.299 21.6271 19.5927 21.6135 19.7719 21.4292L21.4229 19.7781C21.6115 19.5948 21.626 19.301 21.4635 19.0906L20.0469 17.2677C19.9188 17.1031 19.901 16.8771 20.0031 16.6948C20.324 16.1208 20.5823 15.499 20.7698 14.8469C20.8271 14.6469 20.9979 14.5 21.2042 14.474L23.4958 14.1823C23.7573 14.15 23.9583 13.924 23.9583 13.6667V11.3333C23.9583 11.076 23.7573 10.85 23.501 10.8198L21.2052 10.5271C20.999 10.501 20.8281 10.3542 20.7708 10.1542C20.5833 9.50208 20.325 8.88021 20.0042 8.30625C19.9021 8.12396 19.9187 7.89792 20.0479 7.73333L21.4646 5.91042C21.6281 5.7 21.6135 5.40625 21.4302 5.22917L19.7792 3.57812C19.5969 3.38854 19.3021 3.37396 19.0917 3.5375L17.2687 4.95417C17.1031 5.08229 16.8771 5.1 16.6948 4.99792C16.1229 4.67708 15.501 4.41979 14.8469 4.23125C14.6469 4.17396 14.5 4.00312 14.474 3.79687L14.1823 1.50521C14.15 1.24271 13.924 1.04167 13.6667 1.04167H11.3333C11.076 1.04167 10.85 1.24271 10.8198 1.49896L10.5271 3.79479C10.501 4.00104 10.3542 4.17187 10.1542 4.23021C9.5 4.41771 8.87812 4.67604 8.30625 4.99583C8.12396 5.09896 7.89792 5.08021 7.73229 4.95312L5.90937 3.53646C5.69896 3.37292 5.40625 3.3875 5.22812 3.57083L3.57708 5.22292C3.38854 5.40625 3.37396 5.7 3.53646 5.91042L4.95312 7.73333C5.08125 7.89792 5.09896 8.12396 4.99687 8.30625C4.675 8.88021 4.41771 9.50208 4.23021 10.1542C4.17292 10.3542 4.00208 10.501 3.79583 10.5271L1.50417 10.8187C1.24271 10.85 1.04167 11.076 1.04167 11.3333V13.6667C1.04167 13.924 1.24271 14.15 1.49896 14.1802L3.79479 14.4729C4.00104 14.499 4.17188 14.6458 4.22917 14.8458C4.41667 15.4979 4.675 16.1198 4.99583 16.6937C5.09792 16.876 5.08125 17.1021 4.95208 17.2667L3.53542 19.0896C3.37187 19.3 3.38646 19.5937 3.56979 19.7708L5.22083 21.4219C5.40312 21.6104 5.69583 21.625 5.90833 21.4625L7.73125 20.0458C7.82604 19.975 7.93854 19.9375 8.05208 19.9375Z"
-                                    fill="white" />
-                                <path
-                                    d="M12.5001 17.7083C9.62821 17.7083 7.29175 15.3718 7.29175 12.5C7.29175 9.62808 9.62821 7.29163 12.5001 7.29163C15.372 7.29163 17.7084 9.62808 17.7084 12.5C17.7084 15.3718 15.372 17.7083 12.5001 17.7083ZM12.5001 8.33329C10.2022 8.33329 8.33341 10.202 8.33341 12.5C8.33341 14.7979 10.2022 16.6666 12.5001 16.6666C14.798 16.6666 16.6667 14.7979 16.6667 12.5C16.6667 10.202 14.798 8.33329 12.5001 8.33329Z"
-                                    fill="white" />
-                            </g>
-                            <defs>
-                                <clipPath id="clip0_168_460">
-                                    <rect width="25" height="25" fill="white" />
-                                </clipPath>
-                            </defs>
-                        </svg>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="bar">
-            <span>Store Page</span>
-            <span>News</span>
-            <span>Game Info</span>
-            <span>Reviews</span>
-        </div>
-        <p style="    margin-top: 10px; color: white;font: Inter;font-size: 25px;font-weight: 200;margin-left: 10px;">DLC
+      <div class="infos">
+        <span style="width: 200px">{{ name }}</span>
+        <p
+          style="
+            color: rgba(255, 255, 255, 0.5);
+            font-family: Inter;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 200;
+            line-height: normal;
+            margin-top: 20px;
+          "
+        >
+          You’ve Played <span style="font-size: 16px; margin-left: 20px">2hr 30min </span>
         </p>
-        <div class="GameArea"></div>
+        <p
+          style="
+            color: rgba(255, 255, 255, 0.5);
+            font-family: Inter;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 200;
+            line-height: normal;
+            margin-top: 10px;
+          "
+        >
+          Last Played <span style="font-size: 16px; margin-left: 37px">Today</span>
+        </p>
+        <div style="display: flex; margin-top: auto">
+          <div class="button">Play</div>
+          <div
+            style="
+              margin-left: 5px;
+              width: 43px;
+              height: 42px;
+              flex-shrink: 0;
+              border-radius: 10px;
+              background: rgba(78, 89, 109, 0.1);
+              justify-content: center;
+              align-items: center;
+              display: flex;
+            "
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="25"
+              height="25"
+              viewBox="0 0 25 25"
+              fill="none"
+            >
+              <g clip-path="url(#clip0_168_460)">
+                <path
+                  d="M13.6667 25H11.3333C10.5448 25 9.87917 24.4094 9.78542 23.625L9.53646 21.6708C9.03958 21.5094 8.56042 21.3104 8.10521 21.0781L6.54896 22.2875C5.91771 22.776 5.02917 22.7198 4.48125 22.1562L2.84062 20.5156C2.28125 19.9729 2.225 19.0844 2.71354 18.4542L3.92292 16.8969C3.68958 16.4417 3.49062 15.9625 3.33021 15.4656L1.37187 15.2167C0.590625 15.1208 0 14.4552 0 13.6667V11.3333C0 10.5448 0.590625 9.87917 1.375 9.78542L3.32917 9.53646C3.49062 9.03958 3.68958 8.56042 3.92188 8.10521L2.71354 6.54896C2.22396 5.91771 2.28125 5.02812 2.84583 4.48021L4.48646 2.83958C5.02917 2.28021 5.91875 2.225 6.54792 2.7125L8.10417 3.92292C8.55937 3.69062 9.03854 3.49167 9.53646 3.33021L9.78542 1.37187C9.87917 0.590625 10.5448 0 11.3333 0H13.6667C14.4552 0 15.1208 0.590625 15.2146 1.375L15.4635 3.32917C15.9615 3.49062 16.4406 3.68958 16.8958 3.92188L18.4521 2.7125C19.0844 2.22396 19.9719 2.28021 20.5198 2.84479L22.1604 4.48542C22.7198 5.02813 22.776 5.91667 22.2875 6.54687L21.0781 8.10417C21.3115 8.55937 21.5104 9.03854 21.6708 9.53542L23.6292 9.78437C24.4094 9.87917 25 10.5448 25 11.3333V13.6667C25 14.4552 24.4094 15.1208 23.625 15.2146L21.6708 15.4635C21.5094 15.9604 21.3104 16.4396 21.0781 16.8948L22.2875 18.451C22.7771 19.0823 22.7198 19.9708 22.1552 20.5187L20.5146 22.1594C19.9719 22.7188 19.0823 22.776 18.4531 22.2865L16.8958 21.0771C16.4406 21.3104 15.9615 21.5094 15.4646 21.6698L15.2156 23.6281C15.1208 24.4094 14.4552 25 13.6667 25ZM8.05208 19.9375C8.13854 19.9375 8.22708 19.9594 8.30625 20.0031C8.88021 20.324 9.50208 20.5823 10.1542 20.7698C10.3542 20.8271 10.501 20.9979 10.5271 21.2042L10.8187 23.4958C10.85 23.7573 11.076 23.9583 11.3333 23.9583H13.6667C13.924 23.9583 14.15 23.7573 14.1802 23.501L14.4729 21.2052C14.499 20.999 14.6458 20.8281 14.8458 20.7708C15.4979 20.5833 16.1198 20.325 16.6937 20.0042C16.876 19.9021 17.1031 19.9198 17.2667 20.0479L19.0896 21.4646C19.299 21.6271 19.5927 21.6135 19.7719 21.4292L21.4229 19.7781C21.6115 19.5948 21.626 19.301 21.4635 19.0906L20.0469 17.2677C19.9188 17.1031 19.901 16.8771 20.0031 16.6948C20.324 16.1208 20.5823 15.499 20.7698 14.8469C20.8271 14.6469 20.9979 14.5 21.2042 14.474L23.4958 14.1823C23.7573 14.15 23.9583 13.924 23.9583 13.6667V11.3333C23.9583 11.076 23.7573 10.85 23.501 10.8198L21.2052 10.5271C20.999 10.501 20.8281 10.3542 20.7708 10.1542C20.5833 9.50208 20.325 8.88021 20.0042 8.30625C19.9021 8.12396 19.9187 7.89792 20.0479 7.73333L21.4646 5.91042C21.6281 5.7 21.6135 5.40625 21.4302 5.22917L19.7792 3.57812C19.5969 3.38854 19.3021 3.37396 19.0917 3.5375L17.2687 4.95417C17.1031 5.08229 16.8771 5.1 16.6948 4.99792C16.1229 4.67708 15.501 4.41979 14.8469 4.23125C14.6469 4.17396 14.5 4.00312 14.474 3.79687L14.1823 1.50521C14.15 1.24271 13.924 1.04167 13.6667 1.04167H11.3333C11.076 1.04167 10.85 1.24271 10.8198 1.49896L10.5271 3.79479C10.501 4.00104 10.3542 4.17187 10.1542 4.23021C9.5 4.41771 8.87812 4.67604 8.30625 4.99583C8.12396 5.09896 7.89792 5.08021 7.73229 4.95312L5.90937 3.53646C5.69896 3.37292 5.40625 3.3875 5.22812 3.57083L3.57708 5.22292C3.38854 5.40625 3.37396 5.7 3.53646 5.91042L4.95312 7.73333C5.08125 7.89792 5.09896 8.12396 4.99687 8.30625C4.675 8.88021 4.41771 9.50208 4.23021 10.1542C4.17292 10.3542 4.00208 10.501 3.79583 10.5271L1.50417 10.8187C1.24271 10.85 1.04167 11.076 1.04167 11.3333V13.6667C1.04167 13.924 1.24271 14.15 1.49896 14.1802L3.79479 14.4729C4.00104 14.499 4.17188 14.6458 4.22917 14.8458C4.41667 15.4979 4.675 16.1198 4.99583 16.6937C5.09792 16.876 5.08125 17.1021 4.95208 17.2667L3.53542 19.0896C3.37187 19.3 3.38646 19.5937 3.56979 19.7708L5.22083 21.4219C5.40312 21.6104 5.69583 21.625 5.90833 21.4625L7.73125 20.0458C7.82604 19.975 7.93854 19.9375 8.05208 19.9375Z"
+                  fill="white"
+                />
+                <path
+                  d="M12.5001 17.7083C9.62821 17.7083 7.29175 15.3718 7.29175 12.5C7.29175 9.62808 9.62821 7.29163 12.5001 7.29163C15.372 7.29163 17.7084 9.62808 17.7084 12.5C17.7084 15.3718 15.372 17.7083 12.5001 17.7083ZM12.5001 8.33329C10.2022 8.33329 8.33341 10.202 8.33341 12.5C8.33341 14.7979 10.2022 16.6666 12.5001 16.6666C14.798 16.6666 16.6667 14.7979 16.6667 12.5C16.6667 10.202 14.798 8.33329 12.5001 8.33329Z"
+                  fill="white"
+                />
+              </g>
+              <defs>
+                <clipPath id="clip0_168_460">
+                  <rect width="25" height="25" fill="white" />
+                </clipPath>
+              </defs>
+            </svg>
+          </div>
+        </div>
+      </div>
     </div>
+    <div class="bar">
+      <span>Store Page</span>
+      <span>News</span>
+      <span>Game Info</span>
+      <span>Reviews</span>
+    </div>
+    <p
+      style="
+        margin-top: 10px;
+        color: white;
+        font: Inter;
+        font-size: 25px;
+        font-weight: 200;
+        margin-left: 10px;
+      "
+    >
+      DLC
+    </p>
+    <div class="GameArea"></div>
+  </div>
 </template>
 
 <script>
-
+import stray from '../assets/stray.jpg'
+import gta from '../assets/gta.jpg'
+import nba from '../assets/nba.jpg'
+import r6 from '../assets/r6.jpg'
+import apex from '../assets/apex.jpg'
+import coldwar from '../assets/coldwar.jpg'
 
 export default {
-    name: 'MainArea',
-    props: {
-        name: String,
-        pictureName: String,
-    },
-};
+  name: 'MainArea',
+  props: {
+    name: String,
+    pictureName: String
+  },
+
+  mounted() {
+    console.log(this.pictureName)
+    console.log(`../assets/${this.pictureName}.png`)
+  },
+  computed: {
+    imageUrl() {
+      // Map pictureName prop to imported images
+      const images = {
+        stray,
+        gta,
+        nba,
+        r6,
+        apex,
+        coldwar
+
+      };
+      return images[this.pictureName] || '';
+    }
+  }
+}
 </script>
 
 <style scoped>
 .MainArea {
-    display: flex;
-    flex-direction: column;
-    margin-top: 20px;
-    margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  margin-left: 20px;
 }
 
 .GameInfo {
-    display: flex;
+  display: flex;
 }
 
 .GameInfo span {
-    color: #FFF;
-    font-family: Inter;
-    font-size: 22px;
-    font-style: normal;
-    font-weight: 200;
-    line-height: normal;
+  color: #fff;
+  font-family: Inter;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 200;
+  line-height: normal;
 }
 
 .img {
-    width: 189px;
-    height: 197px;
-    flex-shrink: 0;
-    border-radius: 25px;
-    background-repeat: no-repeat;
-    background-size: 140% 100%;
-    background-position: center;
-    transition: all 0.05s ease-in-out;
+  width: 189px;
+  height: 197px;
+  flex-shrink: 0;
+  border-radius: 25px;
+  background-repeat: no-repeat;
+  background-size: 140% 100%;
+  background-position: center;
+  transition: all 0.05s ease-in-out;
 }
 
 .infos {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 
-    margin-left: 20px;
+  margin-left: 20px;
 }
 
 .button {
-    width: 164px;
-    height: 42px;
-    flex-shrink: 0;
-    border-radius: 10px;
-    background: #5C43F5;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #FFF;
-    font-family: Inter;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 200;
-    line-height: normal;
-    margin-top: auto;
-    cursor: pointer;
+  width: 164px;
+  height: 42px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  background: #5c43f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 200;
+  line-height: normal;
+  margin-top: auto;
+  cursor: pointer;
 }
 
 .bar {
-    width: 440px;
-    height: 40px;
-    background: rgba(78, 89, 109, 0.10);
-    margin-top: 20px;
-    border-radius: 10px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-
+  width: 440px;
+  height: 40px;
+  background: rgba(78, 89, 109, 0.1);
+  margin-top: 20px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
-.bar span{
-    color: #ffffff75;
-    font-family: Inter, sans-serif;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 200;
-    cursor: pointer;
+.bar span {
+  color: #ffffff75;
+  font-family: Inter, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 200;
+  cursor: pointer;
 }
 
 .GameArea {
-    width: 100%;
-    height: 200px;
-    background: rgba(78, 89, 109, 0.10);
-    margin-top: 5px;
-    border-radius: 10px;
-}</style>
+  width: 100%;
+  height: 200px;
+  background: rgba(78, 89, 109, 0.1);
+  margin-top: 5px;
+  border-radius: 10px;
+}
+</style>
