@@ -28,24 +28,39 @@ export default {
         document.body.style.overflowX = 'hidden';
 
         // Set the initial rotation of the card to almost flat
-        gsap.set(this.$refs.bigCard, { transformPerspective: 1000, rotationX: 85 });
 
-        // Animate the card to flip up when it enters the view
-        gsap.to(this.$refs.bigCard, {
-            rotationX: 0,
-            scrollTrigger: {
-                trigger: this.$refs.bigCard,
-                start: 'bottom bottom', // Start the animation when the bottom of the card is at the bottom of the viewport
-                toggleActions: 'play none none none',
-            }
+        // Use ScrollTrigger's matchMedia method to control the animation based on the viewport width
+        ScrollTrigger.matchMedia({
+            // When the viewport is wider than 1100 pixels, the following rules will apply
+            "(min-width: 1101px)": () => {
+                // Register the ScrollTrigger animation
+                gsap.set(this.$refs.bigCard, { transformPerspective: 1000, rotationX: 85 });
+
+                gsap.to(this.$refs.bigCard, {
+                    rotationX: 0,
+                    scrollTrigger: {
+                        trigger: this.$refs.bigCard,
+                        start: 'bottom bottom', // Start the animation when the bottom of the card is at the bottom of the viewport
+                        toggleActions: 'play none none none',
+                    }
+                });
+            },
+            // All other viewport sizes (viewport width is 1100 pixels or less)
+            "all": () => {
+                // You can define alternate animations or simply do nothing
+            },
         });
     },
     beforeDestroy() {
+        // Clean up by killing ScrollTriggers to prevent memory leaks
+        ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+
         // Re-enable horizontal scrollbar when the component is destroyed
         document.body.style.overflowX = '';
     }
 }
 </script>
+
 
 <style scoped>
 .bigCard {

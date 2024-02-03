@@ -7,9 +7,11 @@
           <div class="tag" ref="tag"><span>Developers Supported</span></div>
           <h1>Open-Source Front End</h1>
           <p>
-            Experience the cutting-edge with Jules' open-source front end. Our transparent and community-driven interface ensures a more reliable, secure, and user-friendly gaming experience
+            Experience the cutting-edge with Jules' open-source front end. Our transparent and
+            community-driven interface ensures a more reliable, secure, and user-friendly gaming
+            experience
           </p>
-          <a href = "https://jules.gg" class="shop" ref="shop">Go To Store</a>
+          <a href="https://jules.gg" class="shop" ref="shop">Go To Store</a>
         </div>
         <div class="inside"></div>
 
@@ -17,32 +19,48 @@
           <div class="grid-item" ref="gridItem1">
             <h1>Stripe Integration</h1>
             <p>
-              Our open-source front end integrates with Stripe, providing a secure and reliable payment system. This ensures every transaction on Jules is safe, smooth, and user-friendly, giving you peace of mind when selling or buying games
+              Our open-source front end integrates with Stripe, providing a secure and reliable
+              payment system. This ensures every transaction on Jules is safe, smooth, and
+              user-friendly, giving you peace of mind when selling or buying games
             </p>
-            <a href="https://jules.gg" class="goto" style="font-weight: 200" ref="goto">Check It Out --></a>
+            <a href="https://jules.gg" class="goto" style="font-weight: 200" ref="goto"
+              >Check It Out --></a
+            >
           </div>
           <div class="grid-item" ref="gridItem2">
             <h1>Digital Rights Management</h1>
             <p>
-              Jules features a custom DRM system designed to protect the rights of game developers and players alike. Our unique approach to DRM balances security with usability, ensuring your games are safeguarded without compromising the gaming experience.
+              Jules features a custom DRM system designed to protect the rights of game developers
+              and players alike. Our unique approach to DRM balances security with usability,
+              ensuring your games are safeguarded without compromising the gaming experience.
             </p>
-            <a href="https://jules.gg" class="goto" style="font-weight: 200" ref="goto">Check It Out --></a>
+            <a href="https://jules.gg" class="goto" style="font-weight: 200" ref="goto"
+              >Check It Out --></a
+            >
           </div>
           <div class="grid-item" ref="gridItem3">
             <h1>Universal Launcher Compatibility Including Emulators</h1>
             <p>
-              Jules simplifies gaming with universal launcher compatibility, including emulators. Access all your games, from any launcher, through Jules. No more switching apps – just one platform for all your gaming needs
+              Jules simplifies gaming with universal launcher compatibility, including emulators.
+              Access all your games, from any launcher, through Jules. No more switching apps – just
+              one platform for all your gaming needs
             </p>
-            <a href="https://jules.gg" class="goto" style="font-weight: 200" ref="goto">Check It Out --></a>
+            <a href="https://jules.gg" class="goto" style="font-weight: 200" ref="goto"
+              >Check It Out --></a
+            >
           </div>
           <div class="grid-item" ref="gridItem4">
             <h1>Plug-In Market</h1>
             <p>
-              Elevate your gaming with Jules' Plugin Store. Choose from community-crafted plugins for interface customization and added features. Transform your launcher to fit your style and needs, enhancing your gaming experience with simple, impactful modifications, all in a user-friendly environment            
-              </p>
-              <a href="https://jules.gg" class="goto" style="font-weight: 200" ref="goto">Check It Out --></a>
-
-            </div>
+              Elevate your gaming with Jules' Plugin Store. Choose from community-crafted plugins
+              for interface customization and added features. Transform your launcher to fit your
+              style and needs, enhancing your gaming experience with simple, impactful
+              modifications, all in a user-friendly environment
+            </p>
+            <a href="https://jules.gg" class="goto" style="font-weight: 200" ref="goto"
+              >Check It Out --></a
+            >
+          </div>
         </div>
       </div>
       <DemoView ref="demo" class="demo" />
@@ -68,7 +86,6 @@
   display: flex;
   justify-content: center;
   z-index: 9;
-
 }
 .main-content {
   display: flex;
@@ -76,6 +93,7 @@
   align-items: center;
   flex-direction: column;
   width: 620px;
+  
 }
 
 .master {
@@ -83,8 +101,8 @@
   flex-direction: column;
   align-items: center;
   width: 100vw;
-  overflow: hidden !important;
-
+  overflow-x: hidden !important;
+  max-width: 100vw !important;
 }
 
 .main-content-text {
@@ -182,7 +200,8 @@
   color: #ffffff;
 }
 
-.grid-item p, a {
+.grid-item p,
+a {
   font-family: Inter;
   font-size: 12px;
   font-style: normal;
@@ -265,9 +284,8 @@
 }
 
 @media screen and (max-width: 800px) {
-  .main{
+  .main {
     height: 1700px;
-
   }
   .main-content {
     justify-content: center;
@@ -333,12 +351,10 @@
     margin-top: 120px;
   }
   .grid-container p {
-
     font-size: 9px;
   }
   .main-content-text {
     padding-right: 0px;
-    
   }
 }
 </style>
