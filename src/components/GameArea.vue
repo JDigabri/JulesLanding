@@ -102,12 +102,12 @@
 </template>
 
 <script>
-import stray from '../assets/stray.jpg'
-import gta from '../assets/gta.jpg'
-import nba from '../assets/nba.jpg'
-import r6 from '../assets/r6.jpg'
-import apex from '../assets/apex.jpg'
-import coldwar from '../assets/coldwar.jpg'
+import stray from '../assets/stray.png'
+import gta from '../assets/gta.png'
+import nba from '../assets/nba.png'
+import r6 from '../assets/r6.png'
+import apex from '../assets/apex.png'
+import coldwar from '../assets/coldwar.png'
 
 export default {
   name: 'MainArea',
